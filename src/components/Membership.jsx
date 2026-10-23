@@ -267,7 +267,7 @@ function Membership() {
 
               <button
                 onClick={nextSlide}
-                aria-label="Next membership"
+                aria-label="Next previous  membership"
               >
                 →
               </button>
@@ -331,7 +331,7 @@ function Membership() {
                 <button className="subscribe-button">
 
                   <span>
-                    SUBSCRIBE
+                    SUBSCRIBE karoo 
                   </span>
 
                   <b>
