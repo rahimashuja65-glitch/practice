@@ -1,0 +1,28 @@
+/* =========================================================
+   THEME VARIABLES (DARK & LIGHT)
+========================================================= */
+
+/* Default Dark Mode */
+:root, [data-theme="dark"] {
+  --bg-color: #050706;       /* Kinetix ka dark background */
+  --text-color: #ffffff;
+  --text-muted: #a0a0a0;
+  --card-bg: #111513;        /* Cards ka background */
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Light Mode */
+[data-theme="light"] {
+  --bg-color: #f4f4f4;       /* Light grey/white background */
+  --text-color: #111111;     /* Dark text */
+  --text-muted: #555555;
+  --card-bg: #ffffff;        /* White cards */
+  --border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Base Body Apply */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}

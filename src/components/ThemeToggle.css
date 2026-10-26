@@ -1,0 +1,66 @@
+.theme-toggle-btn {
+  background: transparent;
+  border: 1px solid rgba(3, 234, 4, 0.3);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 20px; /* Join button se gap */
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(3, 234, 4, 0.1);
+  box-shadow: 0 0 15px rgba(3, 234, 4, 0.2);
+}
+
+.theme-icon-container {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-icon-container svg {
+  width: 20px;
+  height: 20px;
+  color: #03ea04;
+  position: absolute;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease;
+}
+
+/* DARK MODE (Default) - Show Sun, Hide Moon */
+.theme-icon-container.dark .moon-icon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+.theme-icon-container.dark .sun-icon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+/* LIGHT MODE - Show Moon, Hide Sun */
+.theme-icon-container.light .sun-icon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+.theme-icon-container.light .moon-icon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+/* Responsive - Mobile */
+@media (max-width: 800px) {
+  .theme-toggle-btn {
+    margin-right: 15px;
+    width: 38px;
+    height: 38px;
+  }
+}
